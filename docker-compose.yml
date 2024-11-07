@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  #reverse build
+  reverse:
+    build: .
+    image: cs56022218/dailyfix-reverse:latest
+    container_name: dailyfix-reverse
+    restart: always
+    ports:
+      - 80:80
+
+
