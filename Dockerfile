@@ -13,6 +13,8 @@ COPY html /usr/share/nginx/html
 # COPY ไฟล์ renew_cert.sh เข้าไปใน Docker container
 COPY renew_certs.sh /usr/local/bin/renew_certs.sh
 RUN chmod +x /usr/local/bin/renew_certs.sh
-
+COPY check_upstream.sh /usr/local/bin/check_upstream.sh
+RUN chmod +x /usr/local/bin/check_upstream.sh
 # เพิ่ม cron job สำหรับ renew_cert.sh
 RUN echo "0 0 * * * /usr/local/bin/renew_certs.sh" | crontab -
+RUN echo "*/5 * * * * /usr/local/bin/check_upstream.sh" | crontab -
