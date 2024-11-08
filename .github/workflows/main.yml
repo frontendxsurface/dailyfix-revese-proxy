@@ -50,7 +50,7 @@ jobs:
           # Start Docker containers
           docker-compose up -d
 
-          docker-compose -f docker-compose.yml exec -T reverse certbot --nginx --non-interactive --agree-tos -m cs56022218@gmail.com -d dailyfixer.xsurface.com
+        # docker-compose -f docker-compose.yml exec -T reverse certbot --nginx --non-interactive --agree-tos -m cs56022218@gmail.com -d dailyfixer.xsurface.com
 
       - name: Remove dangling images
         run: |

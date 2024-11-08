@@ -14,4 +14,4 @@ RUN chmod +x /usr/local/bin/renew_certs.sh
 COPY html /usr/share/nginx/html
 
 # เพิ่ม cron job สำหรับ renew_cert.sh
-RUN echo "0 0 * * * /usr/local/bin/renew_certs.sh" | crontab -
+# RUN echo "0 0 * * * /usr/local/bin/renew_certs.sh" | crontab -
