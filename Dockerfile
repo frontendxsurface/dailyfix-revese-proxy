@@ -12,3 +12,6 @@ COPY ./renew_certs.sh /usr/local/bin/renew_certs.sh
 RUN chmod +x /usr/local/bin/renew_certs.sh
 # Copy static HTML files to the Nginx web root
 COPY html /usr/share/nginx/html
+
+# เพิ่ม cron job สำหรับ renew_cert.sh
+RUN echo "0 0 * * * /usr/local/bin/renew_certs.sh" | crontab -
