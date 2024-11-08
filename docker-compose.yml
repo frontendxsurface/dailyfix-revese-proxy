@@ -9,10 +9,5 @@ services:
     restart: always
     ports:
       - 80:80
-      # - 443:443
-    volumes:
-      - ./letsencrypt:/etc/letsencrypt
-      - ./nginx:/etc/nginx/conf.d
-      - ./html:/usr/share/nginx/html
 
 
