@@ -53,4 +53,4 @@ jobs:
       - name: Remove dangling images
         run: |
           docker rmi $(docker images --filter "dangling=true" --quiet --no-trunc) || true # Ignore if none exist
-          docker-compose run --rm reverse certbot certonly --standalone -d dailyfix.xsurface.com --email cs56022218@gmail.com --agree-tos --non-interactive
+  # docker-compose run --rm reverse certbot certonly --standalone -d dailyfix.xsurface.com --email cs56022218@gmail.com --agree-tos --non-interactive
