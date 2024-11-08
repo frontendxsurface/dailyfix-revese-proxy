@@ -51,7 +51,7 @@ jobs:
           docker-compose up -d
 
           # Renew certificate if needed
-          docker-compose -f docker-compose.yml exec -T reverse certbot --nginx --non-interactive --agree-tos -m cs56022218@gmail.com -d dailyfixer.xsurface.com
+          docker-compose -f docker-compose.yml exec -T reverse certbot --nginx --non-interactive --agree-tos -m cs56022218@gmail.com -d dailyfix.xsurface.com
 
       - name: Remove dangling images
         run: |
